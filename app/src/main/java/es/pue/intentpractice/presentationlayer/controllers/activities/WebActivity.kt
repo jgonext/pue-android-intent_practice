@@ -1,5 +1,6 @@
 package es.pue.intentpractice.presentationlayer.controllers.activities
 
+import android.app.SearchManager
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -28,9 +29,12 @@ class WebActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://" + aw_txt.text.toString()))
             startActivity(intent)
         }
-        
 
-
+        aw_btn_search.setOnClickListener(){
+            val intent = Intent(Intent.ACTION_WEB_SEARCH)
+            intent.putExtra(SearchManager.QUERY, aw_txt.text.toString())
+            startActivity(intent)
+        }
 
     }
 }
