@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">IntentPractice</string>
+
+    <string name="ac_btn_web">WEB</string>
+    <string name="ac_btn_gps">GPS</string>
+    <string name="ac_btn_dialer">DIALER</string>
+
+    <string name="aw_search" />
+    <string name="aw_btn_search">SEARCH</string>
+    <string name="aw_btn_browser">BROWSER</string>
+    <string name="ag_btn_find">FIND</string>
 </resources>
