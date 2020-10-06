@@ -9,4 +9,6 @@
     <string name="aw_btn_search">SEARCH</string>
     <string name="aw_btn_browser">BROWSER</string>
     <string name="ag_btn_find">FIND</string>
+    <string name="ag_txt" />
+    <string name="aw_txt" >pue.es</string>
 </resources>

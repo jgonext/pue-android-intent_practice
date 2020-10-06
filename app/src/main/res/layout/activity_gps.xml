@@ -6,24 +6,27 @@
     android:layout_height="match_parent"
     tools:context="es.pue.intentpractice.presentationlayer.controllers.activities.GpsActivity">
 
-    <SearchView
-        android:id="@+id/ag_search"
-        android:layout_width="373dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/ag_btn_find"
         android:layout_width="264dp"
         android:layout_height="51dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:text="@string/ag_btn_find"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ag_search" />
+        app:layout_constraintTop_toBottomOf="@+id/ag_txt" />
+
+    <EditText
+        android:id="@+id/ag_txt"
+        android:layout_width="264dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/ag_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
