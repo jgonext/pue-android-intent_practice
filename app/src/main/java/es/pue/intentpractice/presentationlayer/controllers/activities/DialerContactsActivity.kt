@@ -1,7 +1,6 @@
 package es.pue.intentpractice.presentationlayer.controllers.activities
 
 import android.Manifest
-import android.R.id
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -18,9 +17,8 @@ import androidx.cursoradapter.widget.SimpleCursorAdapter
 import com.example.intentpractice.R
 import kotlinx.android.synthetic.main.activity_dialer_contacts.*
 
-
-// TODO Consultar bbdd contactos + seleccion contacto + retorno de numero tlf
 class DialerContactsActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dialer_contacts)
@@ -58,13 +56,13 @@ class DialerContactsActivity : AppCompatActivity() {
 
     private fun getPhoneFromContact(id:Long): String? {
         var ret: String? = "";
-        val projection =  arrayOf(Phone.NUMBER)
+        val projection =  arrayOf(Phone.NUMBER) //ContactsContract.CommonDataKinds.Phone.NUMBER
         val selection = "${Phone.CONTACT_ID} = ? AND ${Phone.TYPE} = ${Phone.TYPE_MOBILE}"
         val selectionArgs = arrayOf(id.toString())
         val sortOrder = null
         val cursor: Cursor? = contentResolver.query(Phone.CONTENT_URI, projection, selection, selectionArgs, sortOrder)
         cursor?.apply {
-            if (moveToFirst()) ret = getString(0)
+            if (moveToFirst()) ret = getString(getColumnIndex(Phone.NUMBER))
         }
         cursor?.close()
         return ret;
@@ -86,7 +84,5 @@ class DialerContactsActivity : AppCompatActivity() {
             }
         }
     }
-
-
 
 }
