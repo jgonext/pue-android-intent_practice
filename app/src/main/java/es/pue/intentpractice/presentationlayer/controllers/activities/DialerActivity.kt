@@ -86,8 +86,9 @@ class DialerActivity : AppCompatActivity(), View.OnClickListener {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == SELECT_PHONE_NUMBER2 && resultCode == Activity.RESULT_OK) {
             val message: String? = data?.getStringExtra("MESSAGE")
-            Log.i("XXX", "message=$message")
-            Toast.makeText(this, "message=$message", Toast.LENGTH_LONG).show()
+            //Log.i("XXX", "message=$message")
+            //Toast.makeText(this, "message=$message", Toast.LENGTH_LONG).show()
+            ad_text.setText(message)
         } else
         if (requestCode == SELECT_PHONE_NUMBER && resultCode == Activity.RESULT_OK) {
             val contactUri: Uri? = data?.data
